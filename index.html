@@ -2,9 +2,135 @@
 <html>
 <head>
   <title>Bhavesh Barot</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      display: flex;
+      background: #0f172a;
+      color: white;
+    }
+
+    .sidebar {
+      width: 220px;
+      background: #020617;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+    }
+
+    .sidebar h2 {
+      color: #60a5fa;
+    }
+
+    .menu a {
+      display: block;
+      color: #94a3b8;
+      margin: 15px 0;
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      color: white;
+    }
+
+    .main {
+      margin-left: 240px;
+      padding: 40px;
+      width: 100%;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .grid .card {
+      width: 300px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>My Portfolio</h1>
-  <p>Coming soon...</p>
+
+  <div class="sidebar">
+    <h2>Bhavesh</h2>
+
+    <div class="menu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="section">
+      <h1>Bhavesh Barot</h1>
+      <p>Senior React Native Developer | iOS Specialist</p>
+    </div>
+
+    <div class="section" id="about">
+      <h2>About</h2>
+      <p>I build scalable mobile apps with strong architecture and performance optimization.</p>
+    </div>
+
+    <div class="section" id="skills">
+      <h2>Skills</h2>
+
+      <div class="grid">
+        <div class="card">React Native</div>
+        <div class="card">iOS (Swift)</div>
+        <div class="card">Performance Optimization</div>
+        <div class="card">Architecture</div>
+      </div>
+    </div>
+
+    <div class="section" id="experience">
+      <h2>Experience</h2>
+
+      <div class="card">
+        <h3>Confidential Project (NDA)</h3>
+        <p>Worked on scalable mobile applications with real-world users.</p>
+      </div>
+    </div>
+
+    <div class="section" id="projects">
+      <h2>Projects</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>HealthBell</h3>
+          <p>Medication management app with smart scheduling.</p>
+        </div>
+
+        <div class="card">
+          <h3>Bulk Blast</h3>
+          <p>Bulk messaging app for business automation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="contact">
+      <h2>Contact</h2>
+      <p>Email: your@email.com</p>
+    </div>
+
+  </div>
+
 </body>
 </html>
