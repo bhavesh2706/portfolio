@@ -3,72 +3,18 @@
 <head>
   <title>Bhavesh Barot</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      display: flex;
-      background: #0f172a;
-      color: white;
-    }
-
-    .sidebar {
-      width: 220px;
-      background: #020617;
-      padding: 20px;
-      height: 100vh;
-      position: fixed;
-    }
-
-    .sidebar h2 {
-      color: #60a5fa;
-    }
-
-    .menu a {
-      display: block;
-      color: #94a3b8;
-      margin: 15px 0;
-      text-decoration: none;
-    }
-
-    .menu a:hover {
-      color: white;
-    }
-
-    .main {
-      margin-left: 240px;
-      padding: 40px;
-      width: 100%;
-    }
-
-    .section {
-      margin-bottom: 60px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin: 10px;
-      border-radius: 10px;
-    }
-
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .grid .card {
-      width: 300px;
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- Sidebar -->
   <div class="sidebar">
     <h2>Bhavesh</h2>
 
     <div class="menu">
+      <a href="#home">Welcome</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
@@ -77,18 +23,28 @@
     </div>
   </div>
 
+  <!-- Main Content -->
   <div class="main">
 
-    <div class="section">
-      <h1>Bhavesh Barot</h1>
-      <p>Senior React Native Developer | iOS Specialist</p>
+    <!-- HOME -->
+    <div class="section" id="home">
+      <div class="profile">
+        <img src="profile-short.png" alt="Profile Image">
+        <h1>Bhavesh Barot</h1>
+        <p>Senior React Native Developer | iOS Specialist</p>
+      </div>
     </div>
 
+    <!-- ABOUT -->
     <div class="section" id="about">
       <h2>About</h2>
-      <p>I build scalable mobile apps with strong architecture and performance optimization.</p>
+      <p>
+        I build scalable mobile applications with strong architecture,
+        performance optimization, and real-world problem solving.
+      </p>
     </div>
 
+    <!-- SKILLS -->
     <div class="section" id="skills">
       <h2>Skills</h2>
 
@@ -100,37 +56,47 @@
       </div>
     </div>
 
+    <!-- EXPERIENCE -->
     <div class="section" id="experience">
       <h2>Experience</h2>
 
       <div class="card">
         <h3>Confidential Project (NDA)</h3>
-        <p>Worked on scalable mobile applications with real-world users.</p>
+        <p>
+          Worked on scalable mobile applications with real-world users,
+          focusing on performance and architecture improvements.
+        </p>
       </div>
     </div>
 
+    <!-- PROJECTS -->
     <div class="section" id="projects">
       <h2>Projects</h2>
 
       <div class="grid">
         <div class="card">
           <h3>HealthBell</h3>
-          <p>Medication management app with smart scheduling.</p>
+          <p>Medication management app with advanced scheduling logic.</p>
         </div>
 
         <div class="card">
           <h3>Bulk Blast</h3>
-          <p>Bulk messaging app for business automation.</p>
+          <p>Bulk messaging app helping businesses automate communication.</p>
         </div>
       </div>
     </div>
 
+    <!-- CONTACT -->
     <div class="section" id="contact">
       <h2>Contact</h2>
       <p>Email: your@email.com</p>
+      <p>LinkedIn: your-linkedin-url</p>
     </div>
 
   </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 
 </body>
 </html>
