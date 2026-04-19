@@ -76,6 +76,7 @@ body {
   width: 100%;
 }
 
+/* Profile */
 .profile {
   text-align: center;
 }
@@ -83,12 +84,23 @@ body {
 .profile img {
   width: 120px;
   border-radius: 50%;
+  margin-bottom: 20px;
 }
 
+.profile h1 {
+  font-size: 36px;
+}
+
+.profile p {
+  color: #94a3b8;
+}
+
+/* Sections */
 .section {
   margin-bottom: 60px;
 }
 
+/* Cards */
 .card {
   background: #1e293b;
   padding: 20px;
@@ -96,6 +108,7 @@ body {
   margin: 10px;
 }
 
+/* Grid */
 .grid {
   display: flex;
   flex-wrap: wrap;
