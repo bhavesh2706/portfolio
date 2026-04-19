@@ -6,7 +6,9 @@ window.addEventListener("scroll", () => {
 
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
-    if (window.scrollY >= sectionTop - 100) {
+    const sectionHeight = section.clientHeight;
+
+    if (window.scrollY >= sectionTop - sectionHeight / 3) {
       current = section.getAttribute("id");
     }
   });
@@ -16,5 +18,14 @@ window.addEventListener("scroll", () => {
     if (link.getAttribute("href") === "#" + current) {
       link.classList.add("active");
     }
+  });
+});
+
+// Smooth scroll
+navLinks.forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    target.scrollIntoView({ behavior: "smooth" });
   });
 });
