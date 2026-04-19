@@ -1,8 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Bhavesh Barot | Mobile Architect</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: white;
+      display: flex;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 260px;
+      background: #020617;
+      height: 100vh;
+      padding: 40px 20px;
+      position: fixed;
+    }
+
+    .menu a {
+      display: block;
+      color: #94a3b8;
+      text-decoration: none;
+      margin: 25px 0;
+      letter-spacing: 2px;
+      font-size: 12px;
+      position: relative;
+    }
+
+    .menu a.active {
+      color: #60a5fa;
+    }
+
+    .menu a::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background: #1e293b;
+      margin-top: 10px;
+    }
+
+    /* MAIN */
+    .main {
+      margin-left: 260px;
+      padding: 60px;
+      width: 100%;
+    }
+
+    /* TOP RIGHT BUTTON */
+    .top-btn {
+      position: absolute;
+      right: 40px;
+      top: 40px;
+    }
+
+    .btn {
+      background: #3b82f6;
+      padding: 12px 20px;
+      border-radius: 25px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* PROFILE */
+    .profile {
+      max-width: 700px;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .name {
+      font-size: 52px;
+      font-weight: 700;
+      color: #93c5fd;
+    }
+
+    .designation {
+      font-size: 20px;
+      margin: 10px 0;
+      color: #cbd5f5;
+    }
+
+    .desc {
+      margin-top: 20px;
+      line-height: 1.6;
+      color: #cbd5f5;
+    }
+
+    .contact {
+      margin-top: 30px;
+      line-height: 2;
+    }
+
+    .contact a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
