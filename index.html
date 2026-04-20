@@ -1,310 +1,643 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Bhavesh Barot | Mobile Architect</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhavesh Barot | Mobile Architect & Team Lead</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .profile {
-      text-align: center;
-      padding-top: 60px;
-    }
-
-    .profile img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 4px solid #1e293b;
-    }
-
-    .profile h1 {
-      font-size: 48px;
-      color: #e2e8f0;
-      margin-bottom: 10px;
-    }
-
-    .profile h3 {
-      font-size: 20px;
-      color: #60a5fa;
-      margin-bottom: 15px;
-    }
-
-    .tech-stack {
-      color: #cbd5f5;
-      font-size: 14px;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    .contact {
-      line-height: 2;
-      font-size: 15px;
-    }
-
-    .contact a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-  </style>
-
 </head>
-
 <body>
 
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
 <!-- SIDEBAR -->
-<div class="sidebar">
-  <div class="logo">Bhavesh</div>
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <span class="brand-initials">BB</span>
+    <span class="brand-name">Bhavesh Barot</span>
+  </div>
 
   <div class="menu">
-    <a href="#home" class="active">WELCOME</a>
-    <a href="#about">ABOUT</a>
-    <a href="#skills">SKILLS</a>
-    <a href="#experience">EXPERIENCE</a>
-    <a href="#projects">PROJECTS</a>
-    <a href="#case">CASE STUDIES</a>
-    <a href="#education">EDUCATION</a>
-    <a href="#contact">CONTACT</a>
+    <a href="#home" class="nav-link active" data-section="home">
+      <span class="nav-icon">⌂</span>
+      <span class="nav-label">Home</span>
+    </a>
+    <a href="#about" class="nav-link" data-section="about">
+      <span class="nav-icon">◈</span>
+      <span class="nav-label">About</span>
+    </a>
+    <a href="#skills" class="nav-link" data-section="skills">
+      <span class="nav-icon">◎</span>
+      <span class="nav-label">Skills</span>
+    </a>
+    <a href="#experience" class="nav-link" data-section="experience">
+      <span class="nav-icon">◇</span>
+      <span class="nav-label">Experience</span>
+    </a>
+    <a href="#projects" class="nav-link" data-section="projects">
+      <span class="nav-icon">◉</span>
+      <span class="nav-label">Projects</span>
+    </a>
+    <a href="#education" class="nav-link" data-section="education">
+      <span class="nav-icon">△</span>
+      <span class="nav-label">Education</span>
+    </a>
+    <a href="#contact" class="nav-link" data-section="contact">
+      <span class="nav-icon">◆</span>
+      <span class="nav-label">Contact</span>
+    </a>
   </div>
-</div>
+
+  <div class="sidebar-footer">
+    <div class="avail-badge">
+      <span class="avail-dot"></span>
+      Open to Work
+    </div>
+  </div>
+</nav>
+
+<!-- HAMBURGER -->
+<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+  <span></span><span></span><span></span>
+</button>
 
 <!-- MAIN -->
-<div class="main">
+<main class="main" id="main">
 
-<!-- HOME -->
-<section class="section" id="home">
-  <div class="profile">
-
-    <!-- PROFILE IMAGE -->
-    <img src="profile-short.png" alt="Bhavesh Barot">
-
-    <!-- NAME -->
-    <h1>Bhavesh Barot</h1>
-
-    <!-- ROLE -->
-    <h3>Mobile Architect</h3>
-
-    <!-- TECH STACK -->
-    <div class="tech-stack">
-      React-Native | iOS (Swift, Objective-C) | iPadOS | tvOS | Android | Flutter | VoIP
+<!-- ═══════════════ HOME ═══════════════ -->
+<section class="section hero-section" id="home">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-tag">Mobile Architect · Team Lead · 9+ Years</div>
+      <h1 class="hero-name">Bhavesh<br><em>Barot</em></h1>
+      <p class="hero-sub">
+        Building scalable, high-performance mobile applications that users love — across iOS, React Native, Flutter, tvOS, and beyond.
+      </p>
+      <div class="hero-stack">
+        <span>Swift</span><span>React Native</span><span>Flutter</span><span>iOS</span><span>tvOS</span><span>iPadOS</span><span>Android</span><span>VoIP</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Hire Me</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">9+</span>
+          <span class="stat-label">Years Exp.</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">25+</span>
+          <span class="stat-label">Apps Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">35%</span>
+          <span class="stat-label">Faster Delivery</span>
+        </div>
+      </div>
     </div>
 
-    <!-- CONTACT -->
-    <div class="contact">
-      Phone:
-      <a href="tel:+919724667687">+91 9724667687</a><br>
-
-      Email:
-      <a href="mailto:bhaveshbarot01@gmail.com">bhaveshbarot01@gmail.com</a><br>
-
-      LinkedIn:
-      <a href="https://www.linkedin.com/in/bhavesh-barot-b0a164184/" target="_blank">
-        LinkedIn Profile
-      </a>
+    <div class="hero-image-wrap">
+      <div class="hero-image-ring"></div>
+      <div class="hero-image-ring ring2"></div>
+      <img src="profile-short.png" alt="Bhavesh Barot" class="hero-photo">
+      <div class="hero-card float-card card1">
+        <span class="fc-icon">📱</span>
+        <span class="fc-text">iOS Expert</span>
+      </div>
+      <div class="hero-card float-card card2">
+        <span class="fc-icon">⚡</span>
+        <span class="fc-text">AI-Powered Dev</span>
+      </div>
     </div>
+  </div>
 
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ═══════════════ ABOUT ═══════════════ -->
 <section class="section" id="about">
-  <h2>Professional Summary</h2>
-  <p>
-    Results-driven Mobile Architect / Team Lead with 9+ years of experience in building scalable,
-    high-performance mobile applications across iOS (Swift, Objective-C), React Native, Flutter, Android,
-    iPadOS, tvOS, and VoIP-enabled solutions.
-  </p>
-  <p>
-    Proven expertise in leading cross-functional teams and delivering end-to-end mobile solutions from concept
-    to deployment, leveraging both microservices and monolithic architectures with a strong focus on performance,
-    security, and seamless user experience.
-  </p>
-  <p>
-    Delivered 25+ production-grade applications across healthcare, logistics, finance, security, education,
-    entertainment, and mobility domains, including AI-powered and real-time systems.
-  </p>
-  <p>
-    Leveraged AI-assisted development to accelerate delivery timelines by 35%, reduce manual effort, and improve
-    overall engineering efficiency.
-  </p>
-  <p>
-    Recognized for strong leadership, problem-solving, and aligning technical solutions with business goals to
-    drive scalable and impactful product outcomes.
-  </p>
+  <div class="section-header">
+    <span class="section-tag">01 / About</span>
+    <h2>Professional Summary</h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="about-lead">
+        Results-driven Mobile Architect with <strong>9+ years of experience</strong> delivering production-grade mobile applications across healthcare, logistics, finance, security, education, entertainment, and mobility domains.
+      </p>
+      <p>
+        I specialise in leading cross-functional teams from concept through App Store deployment — combining deep technical expertise in iOS (Swift &amp; Objective-C), React Native, Flutter, tvOS, and iPadOS with a sharp focus on performance, security, and user experience.
+      </p>
+      <p>
+        I've leveraged AI-assisted development tools (Cursor AI, GitHub Copilot, Amazon CodeWhisperer) to accelerate delivery timelines by <strong>35%</strong>, reduce manual effort, and push overall engineering quality higher.
+      </p>
+      <p>
+        Whether architecting a microservices-based healthcare platform or a real-time logistics tracker, I align technical decisions with business goals to create scalable, impactful products.
+      </p>
+    </div>
+
+    <div class="about-highlights">
+      <div class="highlight-item">
+        <span class="hi-num">25+</span>
+        <span class="hi-desc">Production apps shipped across 8 domains</span>
+      </div>
+      <div class="highlight-item">
+        <span class="hi-num">5</span>
+        <span class="hi-desc">Companies led as senior iOS engineer or team lead</span>
+      </div>
+      <div class="highlight-item">
+        <span class="hi-num">MCA</span>
+        <span class="hi-desc">Master of Computer Applications, Govt. Engineering College Ajmer</span>
+      </div>
+      <div class="highlight-item">
+        <span class="hi-num">3</span>
+        <span class="hi-desc">Languages — English, Gujarati, Hindi</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- SKILLS -->
+<!-- ═══════════════ SKILLS ═══════════════ -->
 <section class="section" id="skills">
-  <h2>Technical Skills</h2>
+  <div class="section-header">
+    <span class="section-tag">02 / Skills</span>
+    <h2>Technical Expertise</h2>
+  </div>
 
   <div class="skills-grid">
 
     <div class="skill-card">
-      <div class="icon">💻</div>
-      <h3>Programming Languages</h3>
+      <div class="sk-icon">💻</div>
+      <h3>Languages</h3>
       <ul>
-        <li>Swift, Objective-C</li>
-        <li>JavaScript, TypeScript</li>
+        <li>Swift &amp; Objective-C</li>
+        <li>JavaScript / TypeScript</li>
         <li>Dart</li>
+        <li>JSX / ES6+</li>
       </ul>
     </div>
 
     <div class="skill-card">
-      <div class="icon">📱</div>
-      <h3>Frameworks & Platforms</h3>
+      <div class="sk-icon">📱</div>
+      <h3>Frameworks &amp; Platforms</h3>
       <ul>
         <li>iOS, iPadOS, tvOS</li>
-        <li>React Native, Flutter</li>
-        <li>Android (Basic/Integration Level)</li>
+        <li>React Native</li>
+        <li>Flutter</li>
+        <li>Android (Integration)</li>
       </ul>
     </div>
 
     <div class="skill-card">
-      <div class="icon">🏗️</div>
-      <h3>Architecture & Patterns</h3>
+      <div class="sk-icon">🏗️</div>
+      <h3>Architecture &amp; Patterns</h3>
       <ul>
         <li>MVC, MVVM, Clean Architecture</li>
         <li>Modular Architecture</li>
-        <li>Microservices & Monolithic Systems</li>
+        <li>Microservices &amp; Monolithic</li>
+        <li>Offline-First &amp; Sync Strategies</li>
       </ul>
     </div>
 
     <div class="skill-card">
-      <div class="icon">🔄</div>
-      <h3>State Management & Libraries</h3>
+      <div class="sk-icon">🔄</div>
+      <h3>State &amp; Data Management</h3>
       <ul>
         <li>Redux, Context API</li>
         <li>RxSwift / Combine</li>
+        <li>Core Data</li>
+        <li>Firebase (Realtime &amp; Firestore)</li>
       </ul>
     </div>
 
     <div class="skill-card">
-      <div class="icon">🤖</div>
+      <div class="sk-icon">🤖</div>
       <h3>AI-Assisted Development</h3>
       <ul>
-        <li>Cursor AI, GitHub Copilot</li>
+        <li>Cursor AI</li>
+        <li>GitHub Copilot</li>
         <li>Amazon CodeWhisperer</li>
         <li>Lovable AI, Trae AI</li>
       </ul>
     </div>
 
     <div class="skill-card">
-      <div class="icon">🛠️</div>
-      <h3>Development Tools</h3>
-      <ul>
-        <li>Xcode, Android Studio</li>
-        <li>VS Code</li>
-        <li>Git (GitHub / Bitbucket / GitLab)</li>
-      </ul>
-    </div>
-
-    <div class="skill-card">
-      <div class="icon">⚡</div>
+      <div class="sk-icon">⚡</div>
       <h3>Mobile Expertise</h3>
       <ul>
-        <li>Performance Optimization</li>
-        <li>Memory Management & Debugging</li>
-        <li>Offline-first & Sync Strategies</li>
-        <li>Push Notifications & Background Tasks</li>
+        <li>Performance Optimisation</li>
+        <li>Memory Management &amp; Debugging</li>
+        <li>Push Notifications &amp; Background Tasks</li>
+        <li>VoIP Integration</li>
       </ul>
     </div>
 
     <div class="skill-card">
-      <div class="icon">🔗</div>
-      <h3>Backend & Integration</h3>
+      <div class="sk-icon">🔗</div>
+      <h3>Backend &amp; Integration</h3>
       <ul>
-        <li>REST APIs, WebSockets</li>
-        <li>Firebase, Analytics</li>
-        <li>Secure Data Handling & Auth</li>
+        <li>REST APIs &amp; WebSockets</li>
+        <li>AVFoundation / AVKit</li>
+        <li>Biometrics &amp; Cryptography</li>
+        <li>Third-Party SDKs &amp; Payment Gateways</li>
       </ul>
     </div>
 
     <div class="skill-card">
-      <div class="icon">🧪</div>
-      <h3>Testing & Deployment</h3>
+      <div class="sk-icon">🧪</div>
+      <h3>Testing &amp; DevOps</h3>
       <ul>
         <li>Unit Testing, UI Testing</li>
-        <li>CI/CD (Fastlane, GitHub Actions)</li>
-        <li>App Store & Play Store Deployment</li>
+        <li>CI/CD — Fastlane, GitHub Actions</li>
+        <li>App Store &amp; Play Store Deployment</li>
+        <li>Code Reviews &amp; Best Practices</li>
       </ul>
     </div>
 
     <div class="skill-card">
-      <div class="icon">👥</div>
-      <h3>Leadership & Collaboration</h3>
+      <div class="sk-icon">👥</div>
+      <h3>Leadership &amp; Process</h3>
       <ul>
-        <li>Team Leadership & Mentorship</li>
-        <li>Code Reviews & Best Practices</li>
+        <li>Team Leadership &amp; Mentorship</li>
         <li>Agile / Scrum</li>
+        <li>Client Relationship Management</li>
+        <li>R&amp;D &amp; Innovation</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <div class="sk-icon">🛠️</div>
+      <h3>Tools</h3>
+      <ul>
+        <li>Xcode, Android Studio, VS Code</li>
+        <li>Git (GitHub / Bitbucket / GitLab)</li>
+        <li>Cocoa Touch, Auto Layout</li>
+        <li>GPS Integration, DLT</li>
       </ul>
     </div>
 
   </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- ═══════════════ EXPERIENCE ═══════════════ -->
 <section class="section" id="experience">
-  <h2>Professional Experience</h2>
-
-  <div class="card">
-    <h3>Team Lead — Saeculum Solutions (2022 – Present)</h3>
-    <p>Built AI-powered apps, reduced development time, and led agile teams.</p>
+  <div class="section-header">
+    <span class="section-tag">03 / Experience</span>
+    <h2>Professional Journey</h2>
   </div>
 
-  <div class="card">
-    <h3>Sr. iOS Developer — ADSquare (2020 – 2022)</h3>
-    <p>Improved engagement and reduced bugs via optimized architecture.</p>
-  </div>
+  <div class="timeline">
 
+    <div class="timeline-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-meta">
+          <span class="tl-period">Feb 2022 – Present</span>
+          <span class="tl-badge current">Current</span>
+        </div>
+        <h3>Team Lead / Sr. iOS Developer</h3>
+        <h4>Saeculum Solutions Pvt Ltd · Ahmedabad, India</h4>
+        <ul>
+          <li>Lead iOS and React Native development for multiple production apps</li>
+          <li>Spearhead AI-assisted development (Cursor AI, Copilot) — cutting delivery time by 35%</li>
+          <li>Conduct thorough code reviews and enforce coding standards across the team</li>
+          <li>Drive R&amp;D for new features, performance optimisation, and security enhancements</li>
+          <li>Manage end-to-end project lifecycle: architecture design → App Store deployment</li>
+          <li>Maintain client relationships and align technical work with business objectives</li>
+        </ul>
+        <div class="tl-tags">
+          <span>React Native</span><span>Swift</span><span>AI Dev</span><span>Team Lead</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-meta">
+          <span class="tl-period">Oct 2020 – Feb 2022</span>
+        </div>
+        <h3>Sr. iOS Developer</h3>
+        <h4>ADSquare Technology Pvt Ltd · Ahmedabad, India</h4>
+        <ul>
+          <li>Led iOS and Flutter development teams, driving cross-platform delivery</li>
+          <li>Performed code reviews and enforced architectural best practices</li>
+          <li>Led R&amp;D for new features and performance improvements</li>
+          <li>Handled App Store and Play Store submissions and release management</li>
+        </ul>
+        <div class="tl-tags">
+          <span>iOS</span><span>Flutter</span><span>Team Lead</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-meta">
+          <span class="tl-period">Nov 2018 – Oct 2020</span>
+        </div>
+        <h3>Sr. iOS Developer</h3>
+        <h4>Pacific Global Solutions · Ahmedabad, India</h4>
+        <ul>
+          <li>Led iOS and Android development teams</li>
+          <li>Focused on performance optimisation, collaboration, and innovation</li>
+          <li>Managed App Store deployment and post-launch support</li>
+        </ul>
+        <div class="tl-tags">
+          <span>iOS</span><span>Android</span><span>Performance</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-meta">
+          <span class="tl-period">Jan 2018 – Oct 2018</span>
+        </div>
+        <h3>Sr. iOS Developer</h3>
+        <h4>Ecosmob Technologies Pvt Ltd · Ahmedabad, India</h4>
+        <ul>
+          <li>Led iOS development team with focus on code quality and innovation</li>
+          <li>Provided architectural direction and rough application design concepts</li>
+        </ul>
+        <div class="tl-tags">
+          <span>iOS</span><span>Architecture</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-meta">
+          <span class="tl-period">Jul 2015 – Jan 2018</span>
+        </div>
+        <h3>Sr. iOS Developer</h3>
+        <h4>Harmis Technology · Ahmedabad, India</h4>
+        <ul>
+          <li>Built strong iOS development foundation across diverse project types</li>
+          <li>Led team in R&amp;D for feature implementation and process improvement</li>
+          <li>Drove app quality through code reviews and performance tuning</li>
+        </ul>
+        <div class="tl-tags">
+          <span>iOS</span><span>Swift</span><span>Obj-C</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- ═══════════════ PROJECTS ═══════════════ -->
 <section class="section" id="projects">
-  <h2>Projects</h2>
-
-  <div class="card">
-    <h3>AI-Powered Applications</h3>
+  <div class="section-header">
+    <span class="section-tag">04 / Projects</span>
+    <h2>Featured Work</h2>
   </div>
 
-  <div class="card">
-    <h3>Logistics Platform</h3>
-  </div>
+  <div class="projects-grid">
 
+    <div class="project-card featured">
+      <div class="proj-domain">Healthcare</div>
+      <h3>Healthcare Management Platform</h3>
+      <p>Dual-sided React Native platform for doctors and patients. Doctors manage patient profiles, schedules, and medical records; patients book appointments, access health records, and receive push notifications — optimised for both smartphones and iPad.</p>
+      <div class="proj-tech">
+        <span>React Native</span><span>Redux</span><span>Firebase</span><span>TypeScript</span><span>RESTful APIs</span>
+      </div>
+      <div class="proj-highlights">
+        <span>📋 Patient Management</span>
+        <span>🔒 Encrypted Messaging</span>
+        <span>📅 Appointment Scheduling</span>
+        <span>📱 iPad-Optimised</span>
+      </div>
+    </div>
+
+    <div class="project-card featured">
+      <div class="proj-domain">Security / Identity</div>
+      <h3>Biometric Identity &amp; Security Solution</h3>
+      <p>Highly secure mobile app integrating biometrics, cryptography, and Distributed Ledger Technology (DLT) to give users complete control over sensitive information — with password-free login and decentralised identity management.</p>
+      <div class="proj-tech">
+        <span>React Native</span><span>Biometrics</span><span>Cryptography</span><span>DLT</span>
+      </div>
+      <div class="proj-highlights">
+        <span>🔑 Password-Free Auth</span>
+        <span>🧬 Facial &amp; Voice Recognition</span>
+        <span>🔐 Decentralised Identity</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="proj-domain">Inspection &amp; Compliance</div>
+      <h3>Inspection &amp; Audit Management App</h3>
+      <p>Cross-platform app to automate business inspections with customisable templates, real-time data capture (photos, ratings), offline functionality with Firebase sync, and detailed compliance reporting.</p>
+      <div class="proj-tech">
+        <span>React Native</span><span>Redux</span><span>Firebase</span><span>TypeScript</span>
+      </div>
+      <div class="proj-highlights">
+        <span>📷 Real-Time Capture</span>
+        <span>📶 Offline-First</span>
+        <span>📊 Analytics</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="proj-domain">Logistics</div>
+      <h3>Logistics &amp; Package Tracking Platform</h3>
+      <p>React Native app for real-time package tracking, delivery scheduling, and push notifications — designed to handle high-volume real-time data at scale across iOS and Android.</p>
+      <div class="proj-tech">
+        <span>React Native</span><span>Firebase</span><span>Push Notifications</span>
+      </div>
+      <div class="proj-highlights">
+        <span>📦 Real-Time Tracking</span>
+        <span>🚚 Delivery Scheduling</span>
+        <span>📲 Cross-Platform</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="proj-domain">Entertainment / tvOS</div>
+      <h3>Sports Streaming App — Apple TV</h3>
+      <p>tvOS application for live sports streaming and on-demand content, with a lean-back UI optimised for Apple TV, real-time notifications, and seamless cross-device sync.</p>
+      <div class="proj-tech">
+        <span>tvOS</span><span>Swift</span><span>AVKit</span><span>RESTful APIs</span>
+      </div>
+      <div class="proj-highlights">
+        <span>📺 Live Streaming</span>
+        <span>🔔 Real-Time Sync</span>
+        <span>🎬 On-Demand</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="proj-domain">Finance</div>
+      <h3>Accounts Payable Automation</h3>
+      <p>iOS app that streamlines accounts payable — invoice submission, bill analysis, fraud detection with audit trails, and secure digital storage replacing physical filing systems.</p>
+      <div class="proj-tech">
+        <span>Swift</span><span>Core Data</span><span>Firebase</span>
+      </div>
+      <div class="proj-highlights">
+        <span>🔍 Fraud Detection</span>
+        <span>🗂️ Digital Storage</span>
+        <span>📑 Audit Trail</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="proj-domain">Mobility / GPS</div>
+      <h3>Community Delivery &amp; GPS Taxi Apps</h3>
+      <p>Suite of iOS &amp; iPad apps: a community-driven eco-delivery platform that turns regular commutes into green logistics, and a GPS-based on-demand taxi driver app with smart route optimisation.</p>
+      <div class="proj-tech">
+        <span>Swift</span><span>Core Data</span><span>GPS</span><span>RESTful APIs</span>
+      </div>
+      <div class="proj-highlights">
+        <span>🗺️ GPS Tracking</span>
+        <span>🌿 Eco-Delivery</span>
+        <span>⚡ Smart Matching</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="proj-domain">Education</div>
+      <h3>School Management &amp; Communication App</h3>
+      <p>iOS &amp; iPad app connecting schools, teachers, students, and parents with real-time attendance, homework, grades, leave requests, and digital report cards. Role-based access for all user types.</p>
+      <div class="proj-tech">
+        <span>Swift</span><span>Core Data</span><span>Firebase</span>
+      </div>
+      <div class="proj-highlights">
+        <span>👩‍🏫 Multi-Role Access</span>
+        <span>📊 Live Updates</span>
+        <span>📝 Digital Records</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="proj-domain">Finance / Vehicle</div>
+      <h3>Vehicle Expense Management</h3>
+      <p>React Native app for tracking multi-vehicle expenses, monitoring market values, connecting with insurance providers, and accessing refinance prequalification to reduce monthly costs.</p>
+      <div class="proj-tech">
+        <span>React Native</span><span>Firebase</span><span>RESTful APIs</span>
+      </div>
+      <div class="proj-highlights">
+        <span>🚗 Multi-Vehicle</span>
+        <span>📈 Market Value</span>
+        <span>🏦 Refinance Tools</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="proj-domain">Entertainment / Media</div>
+      <h3>Radio Streaming &amp; Multimedia App</h3>
+      <p>iOS &amp; iPad app delivering curated playlists, live shows, local news, and community engagement (requests, shout-outs). Also built a separate multimedia streaming app for movies, music, and podcasts using AVFoundation.</p>
+      <div class="proj-tech">
+        <span>Swift</span><span>AVFoundation</span><span>Core Data</span><span>Firebase</span>
+      </div>
+      <div class="proj-highlights">
+        <span>🎵 Live Streaming</span>
+        <span>📻 Radio &amp; Podcasts</span>
+        <span>👥 Community Features</span>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- CASE STUDIES -->
-<section class="section" id="case">
-  <h2>Case Studies</h2>
-
-  <div class="card">
-    <h3>Performance Optimization</h3>
-  </div>
-
-</section>
-
-<!-- EDUCATION -->
+<!-- ═══════════════ EDUCATION ═══════════════ -->
 <section class="section" id="education">
-  <h2>Education</h2>
+  <div class="section-header">
+    <span class="section-tag">05 / Education</span>
+    <h2>Academic Background</h2>
+  </div>
 
-  <div class="card">
-    <h3>Master of Computer Applications</h3>
-    <p>Government Engineering College, Ajmer</p>
+  <div class="edu-card">
+    <div class="edu-icon">🎓</div>
+    <div class="edu-body">
+      <h3>Master of Computer Applications (MCA)</h3>
+      <h4>Government Engineering College, Ajmer</h4>
+      <p>Ajmer, Rajasthan, India</p>
+    </div>
+    <div class="edu-badge">Postgraduate</div>
+  </div>
+
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section class="section" id="contact">
+  <div class="section-header">
+    <span class="section-tag">06 / Contact</span>
+    <h2>Let's Work Together</h2>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-text">
+      <p class="contact-lead">
+        Whether you're looking for a seasoned Mobile Architect to lead your next project, or a hands-on senior developer to strengthen your iOS / React Native team — I'm open to conversations.
+      </p>
+      <p>Currently based in Ahmedabad, Gujarat, India. Available for remote engagements and on-site roles.</p>
+    </div>
+
+    <div class="contact-items">
+      <a href="tel:+919724667687" class="contact-item">
+        <span class="ci-icon">📞</span>
+        <div>
+          <span class="ci-label">Phone</span>
+          <span class="ci-value">+91 97246 67687</span>
+        </div>
+      </a>
+
+      <a href="mailto:bhaveshbarot01@gmail.com" class="contact-item">
+        <span class="ci-icon">✉️</span>
+        <div>
+          <span class="ci-label">Personal Email</span>
+          <span class="ci-value">bhaveshbarot01@gmail.com</span>
+        </div>
+      </a>
+
+      <a href="mailto:bhavesh.barot@saeculumsolutions.com" class="contact-item">
+        <span class="ci-icon">🏢</span>
+        <div>
+          <span class="ci-label">Work Email</span>
+          <span class="ci-value">bhavesh.barot@saeculumsolutions.com</span>
+        </div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/bhavesh-barot-b0a164184/" target="_blank" rel="noopener" class="contact-item">
+        <span class="ci-icon">💼</span>
+        <div>
+          <span class="ci-label">LinkedIn</span>
+          <span class="ci-value">linkedin.com/in/bhavesh-barot-b0a164184</span>
+        </div>
+      </a>
+
+      <div class="contact-item info-only">
+        <span class="ci-icon">📍</span>
+        <div>
+          <span class="ci-label">Location</span>
+          <span class="ci-value">Ahmedabad, Gujarat, India</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="section" id="contact">
-  <h2>Contact</h2>
-  <p>Email: bhaveshbarot01@gmail.com</p>
-  <p>Phone: +91 9724667687</p>
-</section>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 Bhavesh Barot — Mobile Architect &amp; Team Lead</p>
+  <p class="footer-sub">Built with precision. Deployed with pride.</p>
+</footer>
 
-</div>
+</main>
 
 <script src="script.js"></script>
 </body>
