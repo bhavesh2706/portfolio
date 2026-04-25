@@ -204,11 +204,11 @@ body {
 .hero-grid { display: grid; grid-template-columns: 1fr 440px; gap: 80px; align-items: center; }
 
 .hero-tag {
-  font-family: var(--font-mono); font-size: 12px;
+  font-family: var(--font-display); font-size: 16px;
   color: var(--accent); letter-spacing: 2px; text-transform: uppercase;
   margin-bottom: 20px; display: flex; align-items: center; gap: 8px;
 }
-.hero-tag::before { content: "//"; color: var(--text-dim); }
+/* .hero-tag::before { content: "//"; color: var(--text-dim); } */
 
 .hero-name {
   font-family: var(--font-display);
