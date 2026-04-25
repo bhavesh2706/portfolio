@@ -99,7 +99,6 @@ body {
   pointer-events: none; z-index: 9999;
   transform: translate(-50%,-50%);
   transition: transform 0.15s ease, border-color 0.3s;
-  mix-blend-mode: difference;
 }
 .cursor-dot {
   position: fixed; width: 6px; height: 6px;
