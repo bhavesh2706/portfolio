@@ -247,9 +247,23 @@ body {
 }
 .fc-icon { font-size: 15px; }
 .fc-text { color: var(--text); }
-.card1 { top: 35px; right: -5px; animation: float1 4s ease-in-out infinite; }
+/* .card1 { top: 35px; right: -5px; animation: float1 4s ease-in-out infinite; }
 .card2 { bottom: 80px; left: -20px; animation: float2 4.5s ease-in-out infinite; }
-.card3 { bottom: 30px; right: 10px; animation: float1 5s ease-in-out infinite 1s; }
+.card3 { bottom: 30px; right: 10px; animation: float1 5s ease-in-out infinite 1s; } */
+.card1 {
+  top: 10%;
+  right: -10px;
+}
+
+.card2 {
+  bottom: 20%;
+  left: -30px;
+}
+
+.card3 {
+  bottom: 5%;
+  right: -10px;
+}
 @keyframes float1 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 @keyframes float2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
 
