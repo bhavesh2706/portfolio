@@ -69,16 +69,16 @@ navLinks.forEach(link => {
 });
 
 // CTA buttons
-document.querySelectorAll(".btn-primary, .btn-ghost").forEach(btn => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const href = btn.getAttribute("href");
-    if (href && href.startsWith("#")) {
-      const target = document.querySelector(href);
-      if (target) target.scrollIntoView({ behavior: "smooth" });
+const appsStat = document.getElementById("appsStat");
+
+if (appsStat) {
+  appsStat.addEventListener("click", () => {
+    const target = document.querySelector("#projects");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
     }
   });
-});
+}
 
 // ─── Mobile Hamburger ─────────────────────────────
 const hamburger = document.getElementById("hamburger");
