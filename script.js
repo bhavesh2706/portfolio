@@ -2,8 +2,24 @@
    BHAVESH BAROT — PORTFOLIO SCRIPTS
 ═══════════════════════════════════════════════════ */
 
+// ─── Theme Toggle (Light / Dark) ──────────────────
+(function () {
+  const toggle = document.getElementById("themeToggle");
+  const saved  = localStorage.getItem("bb-theme") || "dark";
+  document.documentElement.setAttribute("data-theme", saved);
+
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next    = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("bb-theme", next);
+    });
+  }
+})();
+
 // ─── Custom Cursor ────────────────────────────────
-const cursor = document.getElementById("cursor");
+const cursor    = document.getElementById("cursor");
 const cursorDot = document.getElementById("cursorDot");
 
 if (cursor && cursorDot) {
@@ -14,14 +30,14 @@ if (cursor && cursorDot) {
     mouseX = e.clientX;
     mouseY = e.clientY;
     cursorDot.style.left = mouseX + "px";
-    cursorDot.style.top = mouseY + "px";
+    cursorDot.style.top  = mouseY + "px";
   });
 
   function animateCursor() {
     curX += (mouseX - curX) * 0.12;
     curY += (mouseY - curY) * 0.12;
     cursor.style.left = curX + "px";
-    cursor.style.top = curY + "px";
+    cursor.style.top  = curY + "px";
     requestAnimationFrame(animateCursor);
   }
   animateCursor();
@@ -33,14 +49,8 @@ if (cursor && cursorDot) {
 }
 
 // ─── Active Nav on Scroll ─────────────────────────
-const sections = document.querySelectorAll(".section");
-const navLinks = document.querySelectorAll(".nav-link");
-
-const observerOptions = {
-  root: null,
-  rootMargin: "-40% 0px -40% 0px",
-  threshold: 0
-};
+const sections  = document.querySelectorAll(".section");
+const navLinks  = document.querySelectorAll(".nav-link");
 
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -51,29 +61,27 @@ const sectionObserver = new IntersectionObserver((entries) => {
       });
     }
   });
-}, observerOptions);
+}, { root: null, rootMargin: "-40% 0px -40% 0px", threshold: 0 });
 
 sections.forEach(section => sectionObserver.observe(section));
 
 // ─── Smooth Scroll ────────────────────────────────
+const sidebar = document.getElementById("sidebar");
+
 navLinks.forEach(link => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
     const target = document.querySelector(link.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    // Close mobile menu
-    sidebar.classList.remove("open");
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (sidebar) sidebar.classList.remove("open");
   });
 });
 
-// CTA buttons
 document.querySelectorAll(".btn-primary, .btn-ghost").forEach(btn => {
   btn.addEventListener("click", (e) => {
-    e.preventDefault();
     const href = btn.getAttribute("href");
     if (href && href.startsWith("#")) {
+      e.preventDefault();
       const target = document.querySelector(href);
       if (target) target.scrollIntoView({ behavior: "smooth" });
     }
@@ -82,18 +90,15 @@ document.querySelectorAll(".btn-primary, .btn-ghost").forEach(btn => {
 
 // ─── Mobile Hamburger ─────────────────────────────
 const hamburger = document.getElementById("hamburger");
-const sidebar = document.getElementById("sidebar");
 
-hamburger.addEventListener("click", () => {
-  sidebar.classList.toggle("open");
-});
-
-// Close sidebar on outside click
-document.addEventListener("click", (e) => {
-  if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
-    sidebar.classList.remove("open");
-  }
-});
+if (hamburger && sidebar) {
+  hamburger.addEventListener("click", () => sidebar.classList.toggle("open"));
+  document.addEventListener("click", (e) => {
+    if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+      sidebar.classList.remove("open");
+    }
+  });
+}
 
 // ─── Scroll Fade-In Animations ────────────────────
 const fadeEls = document.querySelectorAll(
@@ -115,16 +120,14 @@ fadeEls.forEach((el, i) => {
   fadeObserver.observe(el);
 });
 
-// ─── Hero parallax (subtle) ───────────────────────
+// ─── Hero Parallax (subtle) ───────────────────────
 const heroSection = document.getElementById("home");
 if (heroSection) {
   window.addEventListener("scroll", () => {
     const scrolled = window.scrollY;
     if (scrolled < window.innerHeight) {
       const heroText = heroSection.querySelector(".hero-text");
-      if (heroText) {
-        heroText.style.transform = `translateY(${scrolled * 0.08}px)`;
-      }
+      if (heroText) heroText.style.transform = `translateY(${scrolled * 0.08}px)`;
     }
   }, { passive: true });
 }
