@@ -25,8 +25,18 @@ const cursorDot = document.getElementById("cursorDot");
 if (cursor && cursorDot) {
   let mouseX = 0, mouseY = 0;
   let curX = 0, curY = 0;
+  let cursorVisible = false;
+
+  // Hide until first mouse move so cursor doesn't flash at 0,0
+  cursor.style.opacity = "0";
+  cursorDot.style.opacity = "0";
 
   document.addEventListener("mousemove", (e) => {
+    if (!cursorVisible) {
+      cursorVisible = true;
+      cursor.style.opacity = "1";
+      cursorDot.style.opacity = "1";
+    }
     mouseX = e.clientX;
     mouseY = e.clientY;
     cursorDot.style.left = mouseX + "px";
