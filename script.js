@@ -128,3 +128,5 @@ if (heroSection) {
     }
   }, { passive: true });
 }
+
+lucide.createIcons();
