@@ -375,6 +375,18 @@ body {
   font-family: var(--font-mono); font-size: 11px; color: var(--accent3);
 }
 
+.nav-link i {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+  opacity: 0.8;
+}
+
+.nav-link:hover i {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 /* ─── Impact Strip ───────────────────────────── */
 .impact-strip {
   display: flex; flex-wrap: wrap; gap: 0;
