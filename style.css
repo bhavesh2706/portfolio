@@ -250,6 +250,15 @@ body {
 /* .card1 { top: 35px; right: -5px; animation: float1 4s ease-in-out infinite; }
 .card2 { bottom: 80px; left: -20px; animation: float2 4.5s ease-in-out infinite; }
 .card3 { bottom: 30px; right: 10px; animation: float1 5s ease-in-out infinite 1s; } */
+.hero-image-wrap {
+  position: relative;
+}
+
+/* Base center reference */
+.hero-card {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
 .card1 {
   top: 10%;
   right: -10px;
