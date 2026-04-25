@@ -329,7 +329,27 @@ body {
 }
 .skill-card:hover { border-color: rgba(59,130,246,0.3); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
 .skill-card:hover::before { opacity: 1; }
-.sk-icon { font-size: 22px; margin-bottom: 13px; display: block; }
+/* .sk-icon { font-size: 22px; margin-bottom: 13px; display: block; } */
+.sk-icon {
+  width: 26px;
+  height: 26px;
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.sk-icon i {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2;
+  color: var(--accent2);
+  transition: all 0.25s ease;
+}
+
+.skill-card:hover .sk-icon i {
+  transform: scale(1.15);
+  color: var(--accent3);
+}
 .skill-card h3 { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
 .skill-card ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
 .skill-card li { font-size: 13px; color: var(--text-muted); padding-left: 14px; position: relative; line-height: 1.5; }
