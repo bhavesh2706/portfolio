@@ -107,27 +107,6 @@ body {
   background: var(--accent); border-radius: 0 3px 3px 0;
 }
 
-.stat-clickable {
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.stat-clickable:hover {
-  transform: translateY(-4px);
-}
-
-.stat-clickable:hover .stat-num {
-  color: var(--accent3);
-}
-
-.hero-bottom-cta {
-  margin-top: 30px;
-}
-
-.hire-btn {
-  display: inline-block;
-}
-
 .sidebar-footer { margin-top: 24px; }
 .avail-badge {
   display: flex; align-items: center; gap: 8px;
