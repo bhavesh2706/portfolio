@@ -459,6 +459,54 @@ body {
 .proj-highlights { display: flex; flex-wrap: wrap; gap: 6px; }
 .proj-highlights span { padding: 4px 10px; background: var(--bg3); border-radius: 6px; font-family: var(--font-body); font-size: 12px; color: var(--text-muted); }
 
+/* ─── Portfolio Note (NDA / GitHub context) ─── */
+.portfolio-note {
+  margin: -20px 0 36px;
+  padding: 22px 24px;
+  background: linear-gradient(135deg, var(--bg2), rgba(59,130,246,0.04));
+  border: 1px solid rgba(59,130,246,0.22);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.portfolio-note-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent2);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.portfolio-note-label i {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2;
+  color: var(--accent2);
+}
+.portfolio-note p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 920px;
+}
+.portfolio-note strong { color: var(--accent3); font-weight: 600; }
+.portfolio-note a {
+  color: var(--accent2);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(96,165,250,0.35);
+  transition: color 0.2s, border-color 0.2s;
+}
+.portfolio-note a:hover {
+  color: var(--accent3);
+  border-bottom-color: var(--accent3);
+}
+
 /* ─── Education ──────────────────────────────── */
 .edu-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; display: flex; align-items: center; gap: 24px; max-width: 620px; transition: border-color 0.2s; }
 .edu-card:hover { border-color: rgba(59,130,246,0.3); }
@@ -472,8 +520,29 @@ body {
 /* ─── Contact ────────────────────────────────── */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 .contact-lead { font-family: var(--font-body); font-size: 17px; color: var(--text); line-height: 1.75; margin-bottom: 14px; }
-.contact-text p:last-of-type { font-family: var(--font-body); font-size: 14.5px; color: var(--text-muted); margin-bottom: 20px; }
+.contact-text p:not(.contact-lead):not(.contact-nda) { font-family: var(--font-body); font-size: 14.5px; color: var(--text-muted); margin-bottom: 14px; }
 .contact-text strong { color: var(--accent3); }
+.contact-nda {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  color: var(--text-dim);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.contact-nda a {
+  color: var(--accent2);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(96,165,250,0.35);
+  transition: color 0.2s, border-color 0.2s;
+}
+.contact-nda a:hover {
+  color: var(--accent3);
+  border-bottom-color: var(--accent3);
+}
 .contact-remote { display: flex; flex-wrap: wrap; gap: 8px; }
 .cr-badge { padding: 6px 14px; background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.2); border-radius: 20px; font-family: var(--font-body); font-size: 12px; color: var(--accent3); font-weight: 500; }
 .contact-items { display: flex; flex-direction: column; gap: 10px; }
@@ -575,6 +644,8 @@ a.contact-item:hover { border-color: rgba(59,130,246,0.3); transform: translateX
   .timeline { padding-left: 24px; }
   .tl-dot { left: -22px; }
   .tl-content { padding: 18px; }
+  .portfolio-note { margin: -8px 0 28px; padding: 18px 16px; }
+  .portfolio-note p { font-size: 13.5px; }
   .edu-card { flex-direction: column; gap: 14px; }
   .edu-badge { align-self: flex-start; margin-left: 0; }
   .arch-row { grid-template-columns: 1fr; }
