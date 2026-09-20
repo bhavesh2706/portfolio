@@ -112,7 +112,7 @@ if (hamburger && sidebar) {
 
 // ─── Scroll Fade-In Animations ────────────────────
 const fadeEls = document.querySelectorAll(
-  ".skill-card, .timeline-item, .project-card, .highlight-item, .edu-card, .contact-item"
+  ".skill-card, .timeline-item, .project-card, .highlight-item, .edu-card, .contact-item, .portfolio-note"
 );
 
 const fadeObserver = new IntersectionObserver((entries) => {
