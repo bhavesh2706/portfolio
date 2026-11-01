@@ -286,13 +286,9 @@ body {
 .stat-divider { width: 1px; height: 36px; background: var(--border); }
 
 /* ─── Hero Image + Perfect Circle Float Cards ───
-   3 cards equidistant on a circle (120° apart)
-   Angles: 0°=top, 120°=lower-right, 240°=lower-left
-   r = 175px for 440px wrap
-   x = r·sin(θ),  y = -r·cos(θ)  (from center)
-   card1 (0°):   x=0,       y=-175
-   card2 (120°): x=+151.6,  y=+87.5
-   card3 (240°): x=-151.6,  y=+87.5
+   Sit on the outer ring. Right card keeps the original 120° point.
+   Top is pulled in to close the gap. Left is pushed out so the
+   wider "Remote or Relocation Ready" label matches the right card.
 ─────────────────────────────────────────────── */
 .hero-image-wrap {
   position: relative;
@@ -337,23 +333,23 @@ body {
 .fc-icon { font-size: 15px; line-height: 1; }
 .fc-text { color: var(--text); }
 
-/* card1 — top center (0°) */
+/* card1 — top center: sit on the outer ring (closes the gap above the photo) */
 .card1 {
   left: 50%;
-  top: calc(50% - 175px);
+  top: calc(50% - 158px);
   transform: translate(-50%, -50%);
   animation: float-a 4s ease-in-out infinite;
 }
-/* card2 — lower right (120°): x=+152, y=+88 */
+/* card2 — lower right: already aligned to the ring */
 .card2 {
   left: calc(50% + 152px);
   top: calc(50% + 88px);
   transform: translate(-50%, -50%);
   animation: float-b 4.5s ease-in-out infinite 0.8s;
 }
-/* card3 — lower left (240°): x=-152, y=+88 */
+/* card3 — lower left: wider label, anchor so the inner edge matches card2 */
 .card3 {
-  left: calc(50% - 152px);
+  left: calc(50% - 208px);
   top: calc(50% + 88px);
   transform: translate(-50%, -50%);
   animation: float-c 5s ease-in-out infinite 1.6s;
@@ -361,7 +357,7 @@ body {
 
 @keyframes float-a {
   0%, 100% { transform: translate(-50%,-50%) translateY(0px); }
-  50%       { transform: translate(-50%,-50%) translateY(-8px); }
+  50%       { transform: translate(-50%,-50%) translateY(-4px); }
 }
 @keyframes float-b {
   0%, 100% { transform: translate(-50%,-50%) translateY(0px); }
@@ -589,10 +585,10 @@ a.contact-item:hover { border-color: rgba(59,130,246,0.3); transform: translateX
   .hero-photo { width: 170px; height: 170px; }
   .hero-image-ring { width: 260px; height: 260px; }
   .ring2 { width: 312px; height: 312px; }
-  /* r=130px cards */
-  .card1 { left: 50%; top: calc(50% - 130px); }
+  /* r=130px cards — top closer to ring, left pushed out to match right */
+  .card1 { left: 50%; top: calc(50% - 118px); }
   .card2 { left: calc(50% + 113px); top: calc(50% + 65px); }
-  .card3 { left: calc(50% - 113px); top: calc(50% + 65px); }
+  .card3 { left: calc(50% - 155px); top: calc(50% + 65px); }
 }
 
 @media (max-width: 1000px) {
@@ -644,9 +640,9 @@ a.contact-item:hover { border-color: rgba(59,130,246,0.3); transform: translateX
   .hero-image-ring { width: 215px; height: 215px; }
   .ring2 { width: 265px; height: 265px; }
   /* r=108px */
-  .card1 { left: 50%; top: calc(50% - 108px); }
+  .card1 { left: 50%; top: calc(50% - 96px); }
   .card2 { left: calc(50% + 94px); top: calc(50% + 54px); }
-  .card3 { left: calc(50% - 94px); top: calc(50% + 54px); }
+  .card3 { left: calc(50% - 128px); top: calc(50% + 54px); }
   .float-card { font-size: 11px; padding: 7px 11px; }
   .fc-icon { font-size: 13px; }
 
@@ -674,8 +670,8 @@ a.contact-item:hover { border-color: rgba(59,130,246,0.3); transform: translateX
   .hero-image-ring { width: 185px; height: 185px; }
   .ring2 { width: 230px; height: 230px; }
   /* r=90px */
-  .card1 { left: 50%; top: calc(50% - 90px); }
+  .card1 { left: 50%; top: calc(50% - 80px); }
   .card2 { left: calc(50% + 78px); top: calc(50% + 45px); }
-  .card3 { left: calc(50% - 78px); top: calc(50% + 45px); }
+  .card3 { left: calc(50% - 108px); top: calc(50% + 45px); }
   .float-card { font-size: 10px; padding: 6px 9px; gap: 5px; border-radius: 9px; }
 }
