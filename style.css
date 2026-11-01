@@ -681,64 +681,63 @@ body {
 }
 
 /*
-  Photo radius = 110px (220/2). Right card is the reference (~10px clear of the photo).
-  Top: place just above the photo (was too far out at -175px).
-  Left: wider label than right, so push further out or it overlaps the photo.
+  Anchor every badge to the PHOTO EDGE with the same ~8px gap.
+  Photo = 220px → radius 110px (+4px border ≈ 114).
+  Top:    bottom edge of badge sits just above photo
+  Right:  left edge of badge sits just right of photo
+  Left:   right edge of badge sits just left of photo (works for any label width)
 */
 .card1 {
   left: 50%;
-  top: calc(50% - 138px);
-  transform: translate(-50%, -50%);
+  top: calc(50% - 118px);
+  transform: translate(-50%, -100%);
   animation: float-a 4s ease-in-out infinite;
 }
 
 .card2 {
-  left: calc(50% + 152px);
-  top: calc(50% + 88px);
-  transform: translate(-50%, -50%);
+  left: calc(50% + 118px);
+  top: calc(50% + 72px);
+  transform: translate(0, -50%);
   animation: float-b 4.5s ease-in-out infinite 0.8s;
 }
 
 .card3 {
-  left: calc(50% - 220px);
-  top: calc(50% + 100px);
-  transform: translate(-50%, -50%);
+  left: calc(50% - 118px);
+  top: calc(50% + 72px);
+  transform: translate(-100%, -50%);
   animation: float-c 5s ease-in-out infinite 1.6s;
 }
 
 @keyframes float-a {
-
   0%,
   100% {
-    transform: translate(-50%, -50%) translateY(0px);
+    transform: translate(-50%, -100%) translateY(0);
   }
 
   50% {
-    transform: translate(-50%, -50%) translateY(-4px);
+    transform: translate(-50%, -100%) translateY(-4px);
   }
 }
 
 @keyframes float-b {
-
   0%,
   100% {
-    transform: translate(-50%, -50%) translateY(0px);
+    transform: translate(0, -50%) translateY(0);
   }
 
   50% {
-    transform: translate(-50%, -50%) translateY(8px);
+    transform: translate(0, -50%) translateY(6px);
   }
 }
 
 @keyframes float-c {
-
   0%,
   100% {
-    transform: translate(-50%, -50%) translateY(0px);
+    transform: translate(-100%, -50%) translateY(0);
   }
 
   50% {
-    transform: translate(-50%, -50%) translateY(-6px);
+    transform: translate(-100%, -50%) translateY(-6px);
   }
 }
 
@@ -1587,20 +1586,23 @@ a.contact-item:hover {
     height: 312px;
   }
 
-  /* photo r=85 — match desktop clearance */
+  /* photo 170px → r≈89 with border; same edge-anchor as desktop */
   .card1 {
     left: 50%;
-    top: calc(50% - 108px);
+    top: calc(50% - 93px);
+    transform: translate(-50%, -100%);
   }
 
   .card2 {
-    left: calc(50% + 113px);
-    top: calc(50% + 65px);
+    left: calc(50% + 93px);
+    top: calc(50% + 56px);
+    transform: translate(0, -50%);
   }
 
   .card3 {
-    left: calc(50% - 168px);
-    top: calc(50% + 74px);
+    left: calc(50% - 93px);
+    top: calc(50% + 56px);
+    transform: translate(-100%, -50%);
   }
 }
 
@@ -1745,20 +1747,23 @@ a.contact-item:hover {
     height: 265px;
   }
 
-  /* photo r=72.5 */
+  /* photo 145px → r≈76.5 with border */
   .card1 {
     left: 50%;
-    top: calc(50% - 92px);
+    top: calc(50% - 80px);
+    transform: translate(-50%, -100%);
   }
 
   .card2 {
-    left: calc(50% + 94px);
-    top: calc(50% + 54px);
+    left: calc(50% + 80px);
+    top: calc(50% + 48px);
+    transform: translate(0, -50%);
   }
 
   .card3 {
-    left: calc(50% - 142px);
-    top: calc(50% + 62px);
+    left: calc(50% - 80px);
+    top: calc(50% + 48px);
+    transform: translate(-100%, -50%);
   }
 
   .float-card {
@@ -1859,20 +1864,23 @@ a.contact-item:hover {
     height: 230px;
   }
 
-  /* photo r=62.5 */
+  /* photo 125px → r≈66.5 with border */
   .card1 {
     left: 50%;
-    top: calc(50% - 80px);
+    top: calc(50% - 70px);
+    transform: translate(-50%, -100%);
   }
 
   .card2 {
-    left: calc(50% + 78px);
-    top: calc(50% + 45px);
+    left: calc(50% + 70px);
+    top: calc(50% + 42px);
+    transform: translate(0, -50%);
   }
 
   .card3 {
-    left: calc(50% - 120px);
-    top: calc(50% + 52px);
+    left: calc(50% - 70px);
+    top: calc(50% + 42px);
+    transform: translate(-100%, -50%);
   }
 
   .float-card {
