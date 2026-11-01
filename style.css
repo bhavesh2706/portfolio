@@ -682,7 +682,7 @@ body {
 /* card1 — top center: sit on the outer ring (closes the gap above the photo) */
 .card1 {
   left: 50%;
-  top: calc(50% - 108px);
+  top: calc(50% - 18px);
   transform: translate(-50%, -50%);
   animation: float-a 4s ease-in-out infinite;
 }
