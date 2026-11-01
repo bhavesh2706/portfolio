@@ -608,6 +608,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  overflow: visible;
 }
 
 .hero-image-ring {
@@ -679,15 +680,18 @@ body {
   color: var(--text);
 }
 
-/* card1 — top center: sit on the outer ring (closes the gap above the photo) */
+/*
+  Photo radius = 110px (220/2). Right card is the reference (~10px clear of the photo).
+  Top: place just above the photo (was too far out at -175px).
+  Left: wider label than right, so push further out or it overlaps the photo.
+*/
 .card1 {
   left: 50%;
-  top: calc(50% - 18px);
+  top: calc(50% - 138px);
   transform: translate(-50%, -50%);
   animation: float-a 4s ease-in-out infinite;
 }
 
-/* card2 — lower right: already aligned to the ring */
 .card2 {
   left: calc(50% + 152px);
   top: calc(50% + 88px);
@@ -695,10 +699,9 @@ body {
   animation: float-b 4.5s ease-in-out infinite 0.8s;
 }
 
-/* card3 — lower left: wider label, anchor so the inner edge matches card2 */
 .card3 {
-  left: calc(50% - 208px);
-  top: calc(50% + 88px);
+  left: calc(50% - 220px);
+  top: calc(50% + 100px);
   transform: translate(-50%, -50%);
   animation: float-c 5s ease-in-out infinite 1.6s;
 }
@@ -1584,10 +1587,10 @@ a.contact-item:hover {
     height: 312px;
   }
 
-  /* r=130px cards — top closer to ring, left pushed out to match right */
+  /* photo r=85 — match desktop clearance */
   .card1 {
     left: 50%;
-    top: calc(50% - 118px);
+    top: calc(50% - 108px);
   }
 
   .card2 {
@@ -1596,8 +1599,8 @@ a.contact-item:hover {
   }
 
   .card3 {
-    left: calc(50% - 155px);
-    top: calc(50% + 65px);
+    left: calc(50% - 168px);
+    top: calc(50% + 74px);
   }
 }
 
@@ -1742,10 +1745,10 @@ a.contact-item:hover {
     height: 265px;
   }
 
-  /* r=108px */
+  /* photo r=72.5 */
   .card1 {
     left: 50%;
-    top: calc(50% - 96px);
+    top: calc(50% - 92px);
   }
 
   .card2 {
@@ -1754,8 +1757,8 @@ a.contact-item:hover {
   }
 
   .card3 {
-    left: calc(50% - 128px);
-    top: calc(50% + 54px);
+    left: calc(50% - 142px);
+    top: calc(50% + 62px);
   }
 
   .float-card {
@@ -1856,7 +1859,7 @@ a.contact-item:hover {
     height: 230px;
   }
 
-  /* r=90px */
+  /* photo r=62.5 */
   .card1 {
     left: 50%;
     top: calc(50% - 80px);
@@ -1868,8 +1871,8 @@ a.contact-item:hover {
   }
 
   .card3 {
-    left: calc(50% - 108px);
-    top: calc(50% + 45px);
+    left: calc(50% - 120px);
+    top: calc(50% + 52px);
   }
 
   .float-card {
